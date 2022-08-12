@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,400;1,900&display=swap');
+
+body {
+    background-color: #ededed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    box-shadow: 2px 2px 2px 2px #0002;
+}
+
+.search {
+    display: flex;
+    margin-right: 20px;
+}
+
+
+
+.placeholder {
+    position: absolute;
+    background-color: transparent;
+    color: #888;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: 100;
+    pointer-events: none;
+    transform: translateX(45px) translateY(2px);
+    transition: color 500ms;
+}
+
+
+.bi-search {
+    position: absolute;
+    color: #888;
+    pointer-events: none;
+    transform: translateX(15px) translateY(9px);
+    transition: color 500ms;
+}
+
+
+
+.search .inputbox:focus ~ span,
+.search .inputbox:valid ~ span,
+.search .inputbox:focus ~ svg,
+.search .inputbox:valid ~ svg
+{
+    color: transparent;
+}
+
+#find {
+
+    background-color: #ccc6;
+    width: 100%;
+    height: 34px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 0 0 15px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    margin: 15px;
+}
+
+.option {
+    cursor: pointer;
+    transition: all 400ms ease-out;
+}
+
+.option.active {
+    color: #000;
+    background-color: transparent;
+    border-radius: 2px;
+    color: rgb(255,29,170);
+color: linear-gradient(90deg, rgba(255,29,170,1) 1%, rgba(255,11,0,1) 55%);
+    
+}
+
+.option:hover {
+    transform: translateY(-5px);
+}
+
+.disable-btn {
+    cursor: none;
+    pointer-events: none;
+    opacity: .6;
+}
